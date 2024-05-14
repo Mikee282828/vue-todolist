@@ -11,15 +11,15 @@ createApp({
             listaBonus: [
                 {
                     titolo: "mangiare la pizza",
-                    done: "false"
+                    done: false
                 },
                 {
                     titolo: "fare la lavatrice",
-                    done: "false"
+                    done: false
                 },
                 {
                     titolo: "fare gli auguri a Giuditta",
-                    done: "false"
+                    done: false
                 }],
             nuovo: "",
             clicked: true
@@ -27,15 +27,14 @@ createApp({
     },
     methods: {
         addTask(task) {
-            let oggetto = {titolo: task, done: "false"};
+            let oggetto = {titolo: task, done: false};
             this.listaBonus.push(oggetto);   
             setTimeout(function () {
                 document.querySelector("input").value = "";
             }, 10);
         },
         done(index) {
-            let listItem = document.querySelector(`li:nth-of-type(${index})`);
-            listItem.classList.add("d-none");
+            this.listaBonus[index].done = true;
         }
     }
 }).mount('#app')
