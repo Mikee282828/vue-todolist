@@ -8,7 +8,8 @@ createApp({
                 "fare la lavatrice",
                 "fare gli auguri a Giuditta"
             ],
-            nuovo : null
+            nuovo : null,
+            clicked : true
         }
     },
     methods:{
@@ -18,6 +19,10 @@ createApp({
             setTimeout(function(){
                 document.querySelector("input").value = "";
             },10);
+        },
+        done(index){
+            let listItem = document.querySelector(`li:nth-of-type(${index})`);
+            listItem.classList.add("d-none");
         }
     }
 }).mount('#app')
