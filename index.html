@@ -16,8 +16,8 @@
 
     <div id="app">
         <ul>
-            <li v-for="task,index in lista">
-                {{ task }} <i class="fa-solid fa-x" @click="done(index+1)"></i>
+            <li v-for="element,index in listaBonus">
+                {{ element.titolo }} <i class="fa-solid fa-x" @click="done(index+1)"></i>
             </li>
             <input type="text" v-model="nuovo">
             <button @click="addTask(nuovo)">Cliccami</button>
