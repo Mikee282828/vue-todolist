@@ -21,7 +21,7 @@ createApp({
                     titolo: "fare gli auguri a Giuditta",
                     done: false
                 }],
-            nuovo: "",
+            nuovo: null,
             clicked: true
         }
     },
@@ -32,6 +32,7 @@ createApp({
             setTimeout(function () {
                 document.querySelector("input").value = "";
             }, 10);
+            this.nuovo = null;
         },
         done(index) {
             this.listaBonus[index].done = true;
