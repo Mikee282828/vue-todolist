@@ -15,7 +15,11 @@
     <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
 
     <div id="app">
-        <h1>{{ message }}</h1>
+        <ul>
+            <li v-for="task in lista">
+                {{ task }}
+            </li>
+        </ul>
     </div>
 
     <script src="main.js"></script>
