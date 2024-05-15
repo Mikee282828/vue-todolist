@@ -22,19 +22,20 @@ createApp({
                     done: false
                 }],
             nuovo: null,
-            clicked: true
         }
     },
-    
+
     methods: {
         addTask(task) {
-            let oggetto = {titolo: task, done: false};
-            this.listaBonus.push(oggetto);  
-            // // chiedere a Luca perché devo per forza mettere il setTimeout
-            // setTimeout(function () {
-            //     document.querySelector("input").value = "";
-            // }, 10);
-            this.nuovo = null;
+            if (task != null) {
+                let oggetto = { titolo: task, done: false };
+                this.listaBonus.push(oggetto);
+                // // chiedere a Luca perché devo per forza mettere il setTimeout
+                // setTimeout(function () {
+                //     document.querySelector("input").value = "";
+                // }, 10);
+                this.nuovo = null;
+            }
         },
         done(index) {
             this.listaBonus[index].done = true;
